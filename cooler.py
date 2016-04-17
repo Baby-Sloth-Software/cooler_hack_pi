@@ -32,6 +32,7 @@ if ver == 0x44:
         crgb = "C: %s, R: %s, G: %s, B: %s\n" % (int(round(clear,-2)), int(round(red,-2)), int(round(green,-2)), int(round(blue,-2)))
         print crgb
         time.sleep(.5)
+        # this sends the color profile when a change is detected
         if clear < (original_clear - range) or clear > (original_clear + range):
             input_data = { 'unit_id': '1',
                            'c_value': int(round(clear, -2)),
